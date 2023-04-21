@@ -1,0 +1,101 @@
+baseURL: "https://arkalim.org"
+languageCode: en-us
+title: Ankit Bhardwaj
+theme: PaperMod
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 10
+    #- identifier: blog
+    #  name: Blog
+    #  url: /blog
+   #   weight: 20
+    - identifier: Achievement
+      name: Achievement
+      url: /
+      weight: 30
+    - identifier: experience
+      name: Experience
+      url: /
+      weight: 40
+   # - identifier: search
+    #  name: Search
+     # url: /search
+      #weight: 50
+    # - identifier: tags
+    #   name: Tags
+    #   url: /tags
+    #   weight: 60
+    # - identifier: notes
+    #   name: Notes
+    #   url: https://notes.arkalim.org
+    #   weight: 70
+
+params:
+  # theme
+  showToc: true
+  TocOpen: false
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  hideMeta: false
+
+  # for enchanced SEO
+  env: production
+
+  # Home Page
+  profileMode:
+    enabled: true
+    title: "Ankit Bhardwaj"
+    subtitle: "Hi 👋, I'm Ankit, Cloud Computing Enthusiast, currently pursuing Bachelor of Technology in Computer Science, Delhi Technical Campus. Well versed in Amazon Web Services seeking a job opportunity. My main aim is to learn new skills and improve myself everytime."
+    imageUrl: "home/me.jpg"
+    imageWidth: 220
+    imageHeight: 220
+    # buttons:
+    #   - name: Resume
+    #     url: ""
+
+  # List View
+  hideDescriptionInList: false
+
+  # cover image for posts
+  cover:
+    hiddenInList: false # hide on list pages and home
+    hiddenInSingle: false # hide on single page
+
+  socialIcons:
+    - name: "email"
+      url: "mailto:mr.ankittt003@gmail.com"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/ankittbhardwaj"
+    - name: "github"
+      url: "https://github.com/Ankitster"
+    #- name: "youtube"
+    #  url: "https://www.youtube.com/c/AbdurRahmanKalim"
+    - name: "cv"
+      url: "https://drive.google.com/file/d/19xGwU69F27o6U8t_zRGyt3NtKutaFoPS/view?usp=drivesdk"
+
+  # text search
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+# for search using Fuse.js
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# allow HTML in MD
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
